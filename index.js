@@ -88,7 +88,7 @@ function inquirePrompt() {
       const internEmail = res.email;
       const internName = res.name;
       inquirer
-        .propmt([
+        .prompt([
           {
             type: "input",
             name: "school",
@@ -102,7 +102,7 @@ function inquirePrompt() {
             internEmail,
             internRes.school
           );
-          team.push(newEnginer);
+          team.push(newIntern);
           console.log(team);
           addOrCreate();
         });
