@@ -28,17 +28,8 @@ const classPrompt = [
   },
   {
     type: "input",
-    message: "Employees ID: ",
+    message: "Team members ID: ",
     name: "id",
-  },
-];
-
-const addAnother = [
-  {
-    type: "list",
-    message: "Add another Employee?",
-    name: "add",
-    choices: ["yes", "no"],
   },
 ];
 
@@ -118,6 +109,16 @@ function inquirePrompt() {
     }
   });
 }
+
+const addAnother = [
+  {
+    type: "list",
+    message: "Add another Employee?",
+    name: "add",
+    choices: ["yes", "no"],
+  },
+];
+
 function addOrCreate() {
   inquirer.prompt(addAnother).then((res) => {
     if (res.add === "yes") {
