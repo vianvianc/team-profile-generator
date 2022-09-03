@@ -1,5 +1,6 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
+const Manager = require;
 
 inquirer
   .prompt([
@@ -9,14 +10,24 @@ inquirer
       name: "name",
     },
     {
-      type: "password",
-      message: "What is your password?",
-      name: "password",
+      type: "input",
+      message: "Team members email: ",
+      name: "email",
     },
     {
-      type: "password",
-      message: "Re-enter password to confirm:",
-      name: "confirm",
+      type: "input",
+      message: "Team members gitHub: ",
+      name: "gitHub",
+    },
+    {
+      type: "input",
+      message: "Employees ID:",
+      name: "id",
+    },
+    {
+      type: "input",
+      message: "Employees ofice number: ",
+      name: "office",
     },
   ])
   .then((response) =>
