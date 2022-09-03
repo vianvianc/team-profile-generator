@@ -21,9 +21,10 @@ const classPrompt = [
     name: "email",
   },
   {
-    type: "input",
+    type: "list",
     message: "Team members position: ",
     name: "position",
+    choices: ["Manager", "Engineer", "Intern"],
   },
   {
     type: "input",
