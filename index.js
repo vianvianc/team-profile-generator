@@ -1,21 +1,26 @@
+const fs = require("fs");
+const inquirer = require("inquirer");
 
-
-
-
-
-
-
-
-
-class Empolyees extends Users {
-
-
-  constructor(name, email, gitHub) {
-    super(name, email);//calls the constructor function of that parent class
-    this.gitHub;
-  }
-  getGrade() {
-    console.log(`this employees gitHub is ${this.gitHub}`);
-  }
-}
-const Employee1
+inquirer
+  .prompt([
+    {
+      type: "input",
+      message: "Team members name: ",
+      name: "name",
+    },
+    {
+      type: "password",
+      message: "What is your password?",
+      name: "password",
+    },
+    {
+      type: "password",
+      message: "Re-enter password to confirm:",
+      name: "confirm",
+    },
+  ])
+  .then((response) =>
+    response.confirm === response.password
+      ? console.log("Success!")
+      : console.log("You forgot your password already?!")
+  );
