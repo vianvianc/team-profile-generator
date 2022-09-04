@@ -8,8 +8,7 @@ const createTeam = (team) => {
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">ID: ${employee.getId()}</li>
                     <li class="list-group-item">
-                    <a href="#" class="card-link">${employee.getEmail()}</a></li>
-                    
+                    <a href="mailto: ${employee.getEmail()}" class="card-link">Email</a></li>
                     ${
                       employee.getPosition() === "Manager"
                         ? `<li class="list-group-item">Office: ${employee.getOffice()}</li>`
@@ -17,35 +16,9 @@ const createTeam = (team) => {
                         ? `<li class="list-group-item">Github: ${employee.getGitHub()}</li>`
                         : `<li class="list-group-item">University: ${employee.getSchool()}</li>`
                     }
-                    
-                    
-                    
-                    
-                    
-                </ul>
-                
-                
-                
-                
-                
-        
-      
-                 
+                </ul>                
             </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-        
-
         `;
   }
   const html = [];
@@ -79,9 +52,6 @@ module.exports = (team) => {
 </div>
 </div>
 </body>
-</html>
-    
-    
-    
+</html>   
     `;
 };

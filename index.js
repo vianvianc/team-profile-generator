@@ -21,15 +21,15 @@ const classPrompt = [
     name: "email",
   },
   {
+    type: "input",
+    message: "Team members ID: ",
+    name: "id",
+  },
+  {
     type: "list",
     message: "Team members position: ",
     name: "position",
     choices: ["Manager", "Engineer", "Intern"],
-  },
-  {
-    type: "input",
-    message: "Team members ID: ",
-    name: "id",
   },
 ];
 
@@ -55,7 +55,7 @@ function inquirePrompt() {
             managerRes.office
           );
           team.push(newManager);
-          console.log(team);
+          //   console.log(team);
           addOrCreate();
         });
     }
@@ -79,7 +79,7 @@ function inquirePrompt() {
             engineerRes.gitHub
           );
           team.push(newEngineer);
-          console.log(team);
+          //   console.log(team);
           addOrCreate();
         });
     }
@@ -103,7 +103,7 @@ function inquirePrompt() {
             internRes.school
           );
           team.push(newIntern);
-          console.log(team);
+          //   console.log(team);
           addOrCreate();
         });
     }

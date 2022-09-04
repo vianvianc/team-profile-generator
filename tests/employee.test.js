@@ -35,25 +35,18 @@ describe("Tests for the instantiation of the employee super class", () => {
     const employee = new Employee(name, id, email);
     expect(employee.getName()).toEqual(name);
   });
-  it("should return the id oproperty when getId method is called", () => {
+  it("should return the id property when getId method is called", () => {
     const name = "vian";
     const id = 10;
     const email = "vian@mail.com";
     const employee = new Employee(name, id, email);
-    expect(employee.getName()).toEqual(name);
+    expect(employee.getId()).toEqual(id);
   });
   it("should return the email property when getEmail method is called", () => {
     const name = "Vian";
     const id = 10;
     const email = "vian@mail.com";
     const employee = new Employee(name, id, email);
-    expect(employee.getName()).toEqual(name);
-  });
-  it("should return 'Employee' when getPosition method is called", () => {
-    const name = "Vian";
-    const id = 10;
-    const email = "vian@mail.com";
-    const employee = new Employee(name, id, email);
-    expect(employee.getPosition()).toEqual("Employee");
+    expect(employee.getEmail()).toEqual(email);
   });
 });
