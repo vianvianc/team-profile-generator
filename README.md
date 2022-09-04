@@ -3,6 +3,9 @@
 This application is a node.js CLI to generate an HTML page to diplay profiles of a software engineering team.
 It includes unit tests.
 
+Here is a video of the functioning app:
+https://watch.screencastify.com/v/B2zNWcQu2LN1uy6r2o6R
+
 GIVEN a command-line application that accepts user input
 WHEN I am prompted for my team members and their information
 THEN an HTML file is generated that displays a nicely formatted team roster based on user input
