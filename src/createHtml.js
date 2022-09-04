@@ -13,7 +13,7 @@ const createTeam = (team) => {
                       employee.getPosition() === "Manager"
                         ? `<li class="list-group-item">Office: ${employee.getOffice()}</li>`
                         : employee.getPosition() === "Engineer"
-                        ? `<li class="list-group-item">Github: ${employee.getGitHub()}</li>`
+                        ? `<li class="list-group-item"><a href="https://github.com/${employee.getGitHub()}" target="_blank">GitHub: ${employee.getGitHub()}</a></li>`
                         : `<li class="list-group-item">University: ${employee.getSchool()}</li>`
                     }
                 </ul>                

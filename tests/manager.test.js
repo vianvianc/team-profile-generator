@@ -17,6 +17,7 @@ describe("Tests for the instantiation of the manager class", () => {
     const employee = new Manager(name, id, email, office);
     expect(employee.getOffice()).toEqual(office);
   });
+
   test('getPosition() should return "Manager"', () => {
     const testValue = "Manager";
     const e = new Manager("Foo", 1, "test@mail.com", 5455);

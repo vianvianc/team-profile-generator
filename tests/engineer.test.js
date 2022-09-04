@@ -1,21 +1,15 @@
 const Engineer = require("../src/Engineer");
 
 describe("Tests for the instantiation of the engineer class", () => {
-  it("should have gitHub property", () => {
-    const name = "vian";
-    const id = 321;
-    const email = "vian@mail.com";
-    const gitHub = "vianvianc";
-    const employee = new Engineer(name, id, email, gitHub);
-    expect(employee.gitHub).toEqual(gitHub);
+  test("tests that the gitHub property generated", () => {
+    const testValue = "testGitHub";
+    const e = new Engineer("Foo", 1, "test@mail.com", "testGitHub");
+    expect(e.gitHub).toBe(testValue);
   });
-  it("should return gitHub property when getGitHub method called", () => {
-    const name = "vian";
-    const id = 321;
-    const email = "vian@mail.com";
-    const gitHub = "vianvianc";
-    const employee = new Engineer(name, id, email, gitHub);
-    expect(employee.getGitHub()).toEqual(gitHub);
+  test('getGitHub() should return "testGitHub"', () => {
+    const testValue = "testGitHub";
+    const e = new Engineer("Foo", 1, "test@mail.com", "testGitHub");
+    expect(e.getGitHub()).toBe(testValue);
   });
   test('getPosition() should return "Engineer"', () => {
     const testValue = "Engineer";
